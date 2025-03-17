@@ -8,8 +8,14 @@
   "description": "You package description",                         
   "keywords": ["Script","Tool"],                       
   "dependencies":{},     
-  "relatedPackages":{},     
-  "samples" : [],     
+  "relatedPackages":{},   
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Demo on how to use the package",
+      "path": "Scene/Demo"
+    }
+  ],
   "author" : {
 "name":"Eloi Stree",
 "mail":"",

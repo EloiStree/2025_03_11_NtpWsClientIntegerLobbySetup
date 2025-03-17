@@ -211,17 +211,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1234571050 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8798389842086585236, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
-  m_PrefabInstance: {fileID: 4344499178315482245}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80cf098ee7ae584e9b1b1815414dcbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1989921036
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,22 +454,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2437151453388527016, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
-      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1234571050}
-    - target: {fileID: 2437151453388527016, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
-      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushIn
-      objectReference: {fileID: 0}
-    - target: {fileID: 2437151453388527016, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
-      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Eloi.IntMapping.IntMapMono_SplitDescriptionEvent, be.elab.intmapping
-      objectReference: {fileID: 0}
-    - target: {fileID: 2437151453388527016, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
-      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7157070656713128340, guid: 0be03f77339caf2499ac59a612711e70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

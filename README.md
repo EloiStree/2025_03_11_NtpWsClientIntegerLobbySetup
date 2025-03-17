@@ -25,8 +25,8 @@ The lobby system is based on the **Index Integer Date (IID)** model:
 
 ### **Default Project Configuration**  
 By default, the project is set up to use:  
-- **NTP Server:** `apint.local`  
-- **IID APInt Server:** `ws://apint.local:4615/`  
+- **NTP Server:** `raspberrypi.local`  
+- **IID APInt Server:** `ws://raspberrypi.local:4615/`  
 
 If you're using the **default image configuration**, the server address is **`raspberrypi.local`**.  
 For the **online default server**, use **`apint.ddns.net`**.

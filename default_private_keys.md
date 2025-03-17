@@ -1,6 +1,6 @@
-For the sake of the example, I used those keys in the step by step guide.
-It works but private key are shared so be carefull
+If you don't care of security and just want to make a Hello World offline with your server.
 
+The demo are set to those keys and coasters.
 
 public address:   
 ```

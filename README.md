@@ -82,7 +82,7 @@ This setup integrates multiple packages:
 - **NTP-Based Time Synchronization**  
   - Ensures game time is synced across players.  
   - [`be.elab.unityfetchoffsetntp`](https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git)  
-- **NTP & WebSocket RSA Setup for APInt**  
+- **NTP & WebSocket RSA Setup for APInt**
   - Handles WebSocket and RSA authentication with APInt.  
   - [`be.elab.wsclientiid`](https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git)  
 - **WebSocket Connection Management with Asymmetrical Keys**  

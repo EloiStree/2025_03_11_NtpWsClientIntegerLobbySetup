@@ -57,14 +57,26 @@ PrefabInstance:
     - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
       propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5747313847400112459}
+      objectReference: {fileID: 8798389842086585236}
     - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
       propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
+      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PushIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
       propertyPath: m_onIntegerPushToServer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Eloi.WsMetaMaskAuth.MaskAuthMono_PushNtpIntegerInTunnel, be.elab.metamaskauth
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
+      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Eloi.IntMapping.IntMapMono_SplitDescriptionEvent, be.elab.intmapping
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926013819083776745, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
+      propertyPath: m_onIntegerReceivedFromServer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5367804067315456708, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
       propertyPath: m_LocalPosition.x
@@ -310,8 +322,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2369750792441448439, guid: 99748fa452310ec4ab32774d3df88e1e, type: 3}
   m_PrefabInstance: {fileID: 4489744524381617567}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5747313847400112459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8181995596764339412, guid: 99748fa452310ec4ab32774d3df88e1e, type: 3}
+--- !u!114 &8798389842086585236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4923822154513686027, guid: 99748fa452310ec4ab32774d3df88e1e, type: 3}
   m_PrefabInstance: {fileID: 4489744524381617567}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80cf098ee7ae584e9b1b1815414dcbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,6 +9,42 @@ To set up the integer multiplayer system, you need the following:
 - **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
 - **Client (Python/JavaScript):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
 
+
+### **Client Int Lobby Setup**  
+Drag and drop the `Client Int Lobby` prefab into your scene.  
+
+- Use `StaticIntLobbyMono_ListenLobby` to **listen** for integers sent by other players.  
+- Use `StaticIntLobbyMono_PushToLobby` to **send** integers to other players in the lobby.  
+
+### **Understanding the Index Integer Date (IID) Concept**  
+The lobby system is based on the **Index Integer Date (IID)** model:  
+
+- **Index** – A unique identifier used as an asymmetric key for authentication on the WebSocket server.  
+- **Integer** – The numerical values shared between computers/games in the shared lobby.  
+- **Date** – If all players use the same NTP server, game actions can be synchronized **without needing network communication**.  
+
+### **Default Project Configuration**  
+By default, the project is set up to use:  
+- **NTP Server:** `apint.local`  
+- **IID APInt Server:** `ws://apint.local:4615/`  
+
+If you're using the **default image configuration**, the server address is **`raspberrypi.local`**.  
+For the **online default server**, use **`apint.ddns.net`**.
+
+### **Security and Authentication**  
+This tool is designed to eliminate the need for a database with emails and passwords. To enable a lobby, you must **add a public key** to the APInt server.  
+
+There are **two types of authentication**:  
+
+1. **RSA Only (`pBit4096B58Pkcs1SHA256` format)**  
+   - Works well but is **not suitable for eSports** because losing the key means **it cannot be recovered**.  
+
+2. **ETH-backed RSA (using MetaMask for Letter Mark authentication)**  
+   - Uses MetaMask as a **backup solution**, allowing an RSA key to perform actions on its behalf.  
+   - If your RSA key is stolen, you can still **prove ownership** of the `Index` to the admin via MetaMask.  
+
+
+
 ### Included Tools  
 This setup integrates multiple packages:  
 

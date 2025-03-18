@@ -9,6 +9,8 @@ To set up the integer multiplayer system, you need the following:
 - **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
 - **Client (Python/JavaScript):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
 
+> Note: To setup your Raspberry PI, you want a SSH and Pi Connect access.
+> Find here a tutorial on the topic: [https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13](https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13)
 
 ### **Client Int Lobby Setup**  
 Drag and drop the `Client Int Lobby` prefab into your scene.  

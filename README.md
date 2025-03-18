@@ -94,7 +94,8 @@ This setup integrates multiple packages:
 
 
 
-####  `package.json` Sample of a lobby  
+####  `package.json` Example for a Lobby 
+
 ```
     "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
     "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",

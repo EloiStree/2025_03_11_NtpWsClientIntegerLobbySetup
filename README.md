@@ -6,7 +6,8 @@ https://youtu.be/7vQYGOoEILQ
 
 
 If you like the tool, you can send me a beer:
-- https://buymeacoffee.com/apintio  
+- https://buymeacoffee.com/apintio
+  
 Or buy some Raspberry PI equipement on Amazon:   
 - https://github.com/EloiStree/HelloInput/issues?q=hardware  
 - https://github.com/EloiStree/HelloRaspberryPiDevKitCM5

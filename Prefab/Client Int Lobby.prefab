@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7157070656713128340}
+  - component: {fileID: 5868078093738374851}
   m_Layer: 0
   m_Name: Client Int Lobby
   m_TagString: Untagged
@@ -34,6 +35,34 @@ Transform:
   - {fileID: 2210648465974311528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5868078093738374851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459136081187859253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eff6f05846b18a43ba5596bcdc6ded1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_setServer: {fileID: 3208682473452533034}
+  m_connectionType: 2
+  m_lanServer:
+    m_description: LAN LOCAL PI
+    m_ntpServer: raspberrypi.local
+    m_websocketServer: ws://raspberrypi.local:4615/
+  m_onlineServer:
+    m_description: ONLINE PI
+    m_ntpServer: apint.ddns.net
+    m_websocketServer: ws://apint.ddns.net:4615/
+  m_setAtAwake: 1
+  m_isInternetReachable: 0
+  m_selected:
+    m_description: Server LAN
+    m_ntpServer: raspberrypi.local
+    m_websocketServer: ws://raspberrypi.local:4615
 --- !u!1001 &669288418505897793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,39 +224,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Client RSA Link To Ether
       objectReference: {fileID: 0}
-    - target: {fileID: 5764171758055109655, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2437151453388527016}
-    - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NotifyIntegerReceivedFromServer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Eloi.IntegerLobby.IntegerLobbyFacadeMono, be.elab.intlobby
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043918795533708872, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_unityThreadListener.m_integerReceived.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da294faec73769449efa92ac73d5060, type: 3}
+--- !u!114 &3208682473452533034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 602462115898644618, guid: 4da294faec73769449efa92ac73d5060, type: 3}
+  m_PrefabInstance: {fileID: 2655971146954714528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f92c9763085fe4fa5c6b636dc1178e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3407427503740434435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 833864040646448547, guid: 4da294faec73769449efa92ac73d5060, type: 3}

@@ -12,8 +12,8 @@ This tool enables integer-based multiplayer functionality using an APInt IO serv
 
 ### Requirements (Raspberry Pi 4/5)  
 To set up the integer multiplayer system, you need the following:  
-- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
 - **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
+- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
 - **Client (Python/JavaScript):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
 
 > Note: To setup your Raspberry PI, you want a SSH and Pi Connect access.

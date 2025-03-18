@@ -63,18 +63,6 @@ This setup integrates multiple packages:
     "be.elab.wsmetamaskauth": "https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git"
 ```
 
-Optional but nice to have:
-- Allows to associate integer to action
-  - https://github.com/EloiStree/OpenUPM_BasicActionIID
-  - It required iid to works:
-    - https://github.com/EloiStree/OpenUPM_IID.git 
-- A sample to show how you can build a integer lobby game
-  - https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship
-- A toolboxes to export integer with compressed data in it:
-  - https://github.com/EloiStree/OpenUPM_PushGenericIID.git
-```
-
-```
 
 ### Features  
 - **Lobby System with Drag-and-Drop Sample & Prefab**  
@@ -103,3 +91,25 @@ Optional but nice to have:
 - **WebSocket Connection Management with Asymmetrical Keys**  
   - Maintains an active connection and handles reconnections automatically.  
   - [`be.elab.wsmetamaskauth`](https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git)  
+
+
+
+####  `package.json` Sample of a lobby  
+```
+    "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
+    "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
+```
+- Enables associating integers with actions:  
+  - [OpenUPM Basic Action IID](https://github.com/EloiStree/OpenUPM_BasicActionIID)  
+  - Requires IID to function:  
+    - [OpenUPM IID](https://github.com/EloiStree/OpenUPM_IID.git)  
+
+- A sample demonstrating how to create an integer-based lobby game:  
+  - [Integer Lobby Sample Spaceship](https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship)  
+  - Requires the Integer Lobby Facade:  
+    - [Integer Lobby Facade](https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git)  
+
+- A toolbox for exporting integers with compressed data:  
+  - [OpenUPM Push Generic IID](https://github.com/EloiStree/OpenUPM_PushGenericIID.git)

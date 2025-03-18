@@ -63,6 +63,17 @@ This setup integrates multiple packages:
     "be.elab.wsmetamaskauth": "https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git"
 ```
 
+Optional but nice to have:
+- Allows to associate integer to action
+  - https://github.com/EloiStree/OpenUPM_BasicActionIID
+- A sample to show how you can build a integer lobby game
+  - https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship
+- A toolboxes to export integer with compressed data in it:
+  - https://github.com/EloiStree/OpenUPM_PushGenericIID.git
+```
+
+```
+
 ### Features  
 - **Lobby System with Drag-and-Drop Sample & Prefab**  
   - [`be.elab.intlobbysetup`](https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git)  

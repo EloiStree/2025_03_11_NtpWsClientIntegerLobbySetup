@@ -151,18 +151,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7157070656713128340}
     m_Modifications:
-    - target: {fileID: 602462115898644618, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_websocketServer
-      value: ws://apint.local:4615/
-      objectReference: {fileID: 0}
-    - target: {fileID: 602462115898644618, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_networkTimeProtocolServer
-      value: apint.local
-      objectReference: {fileID: 0}
-    - target: {fileID: 713216189423476101, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: m_serverUri
-      value: ws://apint.local:4615/
-      objectReference: {fileID: 0}
     - target: {fileID: 833864040646448547, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.016290653
@@ -202,10 +190,6 @@ PrefabInstance:
     - target: {fileID: 833864040646448547, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3704766170970298641, guid: 4da294faec73769449efa92ac73d5060, type: 3}
-      propertyPath: 'm_serversNtp.Array.data[0]'
-      value: apint.local
       objectReference: {fileID: 0}
     - target: {fileID: 5764171758055109655, guid: 4da294faec73769449efa92ac73d5060, type: 3}
       propertyPath: m_Name

@@ -1,10 +1,90 @@
-# Ntp Ws Client Integer Lobby Setup
 
-A drag-and-drop prefab designed for creating an Integer Game Lobby using the APInt IO server over WebSockets.  
-If you're building a game that follows the Integer Lobby pattern, simply drag and drop the prefab into your scene and use Integer inputs and outputs to power your game logic.
+# NTP WebSocket Client Integer Lobby Setup  
 
-If OpenUPM's NPM integration was properly implemented, you could simply add this package, and the rest would install automatically.  
-Since I'm not using it correctly, you'll need to copy and paste the following code into the `package.json`:  
+This tool enables integer-based multiplayer functionality using an APInt IO server.  
+
+### Requirements (Raspberry Pi 4/5)  
+To set up the integer multiplayer system, you need the following:  
+- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
+- **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
+- **Client (Python/JavaScript):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
+
+
+### **Client Int Lobby Setup**  
+Drag and drop the `Client Int Lobby` prefab into your scene.  
+
+- Use `StaticIntLobbyMono_ListenLobby` to **listen** for integers sent by other players.  
+- Use `StaticIntLobbyMono_PushToLobby` to **send** integers to other players in the lobby.  
+
+### **Understanding the Index Integer Date (IID) Concept**  
+The lobby system is based on the **Index Integer Date (IID)** model:  
+
+- **Index** – A unique identifier used as an asymmetric key for authentication on the WebSocket server.  
+- **Integer** – The numerical values shared between computers/games in the shared lobby.  
+- **Date** – If all players use the same NTP server, game actions can be synchronized **without needing network communication**.  
+
+### **Default Project Configuration**  
+By default, the project is set up to use:  
+- **NTP Server:** `raspberrypi.local`  
+- **IID APInt Server:** `ws://raspberrypi.local:4615/`  
+
+If you're using the **default image configuration**, the server address is **`raspberrypi.local`**.  
+For the **online default server**, use **`apint.ddns.net`**.
+
+### **Security and Authentication**  
+This tool is designed to eliminate the need for a database with emails and passwords. To enable a lobby, you must **add a public key** to the APInt server.  
+
+There are **two types of authentication**:  
+
+1. **RSA Only (`pBit4096B58Pkcs1SHA256` format)**  
+   - Works well but is **not suitable for eSports** because losing the key means **it cannot be recovered**.  
+
+2. **ETH-backed RSA (using MetaMask for Letter Mark authentication)**  
+   - Uses MetaMask as a **backup solution**, allowing an RSA key to perform actions on its behalf.  
+   - If your RSA key is stolen, you can still **prove ownership** of the `Index` to the admin via MetaMask.  
+
+
+
+### Included Tools  
+This setup integrates multiple packages:  
+
+#### `package.json` Dependencies  
+```json
+    "be.elab.asymsigner": "https://github.com/EloiStree/OpenUPM_AsymmetricalClipboardCoaster.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysetup": "https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git",
+    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git",
+    "be.elab.pbit4096b58pkcs1sha256": "https://github.com/EloiStree/OpenUPM_pBit4096B58Pkcs1SHA256.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUMP_TickCollection.git",
+    "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
+    "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
+    "be.elab.wsmetamaskauth": "https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git"
 ```
 
-```
+### Features  
+- **Lobby System with Drag-and-Drop Sample & Prefab**  
+  - [`be.elab.intlobbysetup`](https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git)  
+- **Asymmetrical Authentication & Signing**  
+  - Enables login via an asymmetrical cryptographic key that can be copied and pasted.  
+  - [`be.elab.asymsigner`](https://github.com/EloiStree/OpenUPM_AsymmetricalClipboardCoaster.git)  
+- **Integer Lobby Multiplayer Abstraction**  
+  - Simplifies the creation of integer-based multiplayer games.  
+  - [`be.elab.intlobby`](https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git)  
+- **Integer Mapping Documentation Storage (Optional)**  
+  - Helps manage integer-based data structures within the project.  
+  - [`be.elab.intmapping`](https://github.com/EloiStree/2025_03_16_IntegerMapping.git)  
+- **RSA 4096 Authentication for Unity3D**  
+  - Required for secure authentication.  
+  - [`be.elab.pbit4096b58pkcs1sha256`](https://github.com/EloiStree/OpenUPM_pBit4096B58Pkcs1SHA256.git)  
+- **Rapid Prototyping Toolkit**  
+  - Used for quick execution of actions on `Awake`, `Enable`, and `Input` events.  
+  - [`be.elab.tickcollection`](https://github.com/EloiStree/OpenUMP_TickCollection.git)  
+- **NTP-Based Time Synchronization**  
+  - Ensures game time is synced across players.  
+  - [`be.elab.unityfetchoffsetntp`](https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git)  
+- **NTP & WebSocket RSA Setup for APInt**
+  - Handles WebSocket and RSA authentication with APInt.  
+  - [`be.elab.wsclientiid`](https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git)  
+- **WebSocket Connection Management with Asymmetrical Keys**  
+  - Maintains an active connection and handles reconnections automatically.  
+  - [`be.elab.wsmetamaskauth`](https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git)  

@@ -66,6 +66,8 @@ This setup integrates multiple packages:
 Optional but nice to have:
 - Allows to associate integer to action
   - https://github.com/EloiStree/OpenUPM_BasicActionIID
+  - It required iid to works:
+    - https://github.com/EloiStree/OpenUPM_IID.git 
 - A sample to show how you can build a integer lobby game
   - https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship
 - A toolboxes to export integer with compressed data in it:

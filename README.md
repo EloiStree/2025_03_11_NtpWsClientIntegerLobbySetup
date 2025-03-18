@@ -10,6 +10,9 @@ If you like the tool, you can send me a beer:
 Or buy some Raspberry PI equipement on Amazon:   
 - https://github.com/EloiStree/HelloInput/issues?q=hardware  
 - https://github.com/EloiStree/HelloRaspberryPiDevKitCM5
+  
+The code is under ["Pizza License"🍕](https://github.com/EloiStree/License)  
+
 ----------------
 
 # NTP WebSocket Client Integer Lobby Setup  

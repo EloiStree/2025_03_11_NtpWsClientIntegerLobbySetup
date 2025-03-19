@@ -135,3 +135,18 @@ This setup integrates multiple packages:
 
 - A toolbox for exporting integers with compressed data:  
   - [OpenUPM Push Generic IID](https://github.com/EloiStree/OpenUPM_PushGenericIID.git)
+
+
+
+
+----------------
+
+# Also
+
+## Control a Meross Switch with Unity3D
+
+- https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython
+
+## Control a Govee Light with Unity3D
+ 
+- https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython

@@ -150,3 +150,11 @@ This setup integrates multiple packages:
 ## Control a Govee Light with Unity3D
  
 - https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
+
+
+Don't forget the Git:
+```
+git config --global pull.rebase false 
+git config --global user.name "Ano Nymous"  
+git config --global user.email AnoNymous@gamil.com  
+```

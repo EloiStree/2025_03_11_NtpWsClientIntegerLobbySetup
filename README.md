@@ -163,7 +163,7 @@ git config --global user.email AnoNymous@gamil.com
 Find service:
 
 ```
-cd /lib/systemd/system
+cd /etc/systemd/system
 ls apint*
 ```
 

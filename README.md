@@ -77,7 +77,7 @@ This setup integrates multiple packages:
     "be.elab.tickcollection": "https://github.com/EloiStree/OpenUMP_TickCollection.git",
     "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
     "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
-    "be.elab.wsmetamaskauth": "[https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth](https://github.com/EloiStree/OpenUPM_WsAsymAuth).git",
+    "be.elab.wsmetamaskauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
     "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
 
 ```
@@ -109,7 +109,7 @@ This setup integrates multiple packages:
   - [`be.elab.wsclientiid`](https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git)  
 - **WebSocket Connection Management with Asymmetrical Keys**  
   - Maintains an active connection and handles reconnections automatically.  
-  - [`be.elab.wsmetamaskauth`](https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git)  
+  - [`be.elab.wsmetamaskauth`](https://github.com/EloiStree/OpenUPM_WsAsymAuth)  
 
 
 

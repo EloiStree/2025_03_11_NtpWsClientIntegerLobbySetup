@@ -158,3 +158,12 @@ git config --global pull.rebase false
 git config --global user.name "Ano Nymous"  
 git config --global user.email AnoNymous@gamil.com  
 ```
+
+
+Find service:
+
+```
+cd /lib/systemd/system
+ls apint*
+```
+

@@ -1,14 +1,33 @@
 
+
+# How to use ?
+[![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
+https://youtu.be/7vQYGOoEILQ  
+
+
+If you like the tool, you can send me a beer:
+- https://buymeacoffee.com/apintio
+  
+Or buy some Raspberry PI equipement on Amazon:   
+- https://github.com/EloiStree/HelloInput/issues?q=hardware  
+- https://github.com/EloiStree/HelloRaspberryPiDevKitCM5
+  
+The code is under ["Pizza License"🍕](https://github.com/EloiStree/License)  
+
+----------------
+
 # NTP WebSocket Client Integer Lobby Setup  
 
 This tool enables integer-based multiplayer functionality using an APInt IO server.  
 
 ### Requirements (Raspberry Pi 4/5)  
 To set up the integer multiplayer system, you need the following:  
-- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
 - **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
-- **Client (Python/JavaScript):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
+- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
+- **Client (Python/JavaScript/flask):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
 
+> Note: To setup your Raspberry PI, you want a SSH and Pi Connect access.
+> Find here a tutorial on the topic: [https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13](https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13)
 
 ### **Client Int Lobby Setup**  
 Drag and drop the `Client Int Lobby` prefab into your scene.  
@@ -58,8 +77,11 @@ This setup integrates multiple packages:
     "be.elab.tickcollection": "https://github.com/EloiStree/OpenUMP_TickCollection.git",
     "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
     "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
-    "be.elab.wsmetamaskauth": "https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git"
+    "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
+    "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+
 ```
+
 
 ### Features  
 - **Lobby System with Drag-and-Drop Sample & Prefab**  
@@ -87,4 +109,61 @@ This setup integrates multiple packages:
   - [`be.elab.wsclientiid`](https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git)  
 - **WebSocket Connection Management with Asymmetrical Keys**  
   - Maintains an active connection and handles reconnections automatically.  
-  - [`be.elab.wsmetamaskauth`](https://github.com/EloiStree/OpenUPM_WsMetaMaskAuth.git)  
+  - [`be.elab.wsasymauth`](https://github.com/EloiStree/OpenUPM_WsAsymAuth)  
+
+
+
+####  `package.json` Example for a Lobby 
+
+```
+    "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
+    "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
+    "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+
+```
+- Enables associating integers with actions:  
+  - [OpenUPM Basic Action IID](https://github.com/EloiStree/OpenUPM_BasicActionIID)  
+  - Requires IID to function:  
+    - [OpenUPM IID](https://github.com/EloiStree/OpenUPM_IID.git)  
+
+- A sample demonstrating how to create an integer-based lobby game:  
+  - [Integer Lobby Sample Spaceship](https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship)  
+  - Requires the Integer Lobby Facade:  
+    - [Integer Lobby Facade](https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git)  
+
+- A toolbox for exporting integers with compressed data:  
+  - [OpenUPM Push Generic IID](https://github.com/EloiStree/OpenUPM_PushGenericIID.git)
+
+
+
+
+----------------
+
+# Also
+
+## Control a Meross Switch with Unity3D
+
+- https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython
+
+## Control a Govee Light with Unity3D
+ 
+- https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
+
+
+Don't forget the Git:
+```
+git config --global pull.rebase false 
+git config --global user.name "Ano Nymous"  
+git config --global user.email AnoNymous@gamil.com  
+```
+
+
+Find service:
+
+```
+cd /etc/systemd/system
+ls apint*
+```
+

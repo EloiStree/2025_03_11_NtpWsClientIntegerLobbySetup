@@ -82,6 +82,12 @@ This setup integrates multiple packages:
 
 ```
 
+DNS Fail Safe: Apparently Quest don't handle mDNS.   
+Meaning that if you are working with DNS of a LAN Raspberry PI.  
+What we don in this projet for those who host they own home server.  
+You need to scan for LAN IP.  
+https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi  
+
 
 ### Features  
 - **Lobby System with Drag-and-Drop Sample & Prefab**  

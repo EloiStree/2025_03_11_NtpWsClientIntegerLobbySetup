@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7157070656713128340}
-  - component: {fileID: 5868078093738374851}
   m_Layer: 0
-  m_Name: Client Int Lobby Offline Trusted
+  m_Name: Client Int Lobby DNS Fail Safe Trusted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,39 +29,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3165475811204103358}
   - {fileID: 1486086129425262399}
   - {fileID: 4843497262962158981}
   - {fileID: 2210648465974311528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5868078093738374851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8459136081187859253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eff6f05846b18a43ba5596bcdc6ded1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_setServer: {fileID: 3327738595777480752}
-  m_connectionType: 0
-  m_lanServer:
-    m_description: LAN LOCAL PI
-    m_ntpServer: raspberrypi.local
-    m_websocketServer: ws://raspberrypi.local:4625/
-  m_onlineServer:
-    m_description: ONLINE PI
-    m_ntpServer: apint.ddns.net
-    m_websocketServer: ws://raspberrypi.local:4625/
-  m_setAtAwake: 1
-  m_isInternetReachable: 0
-  m_selected:
-    m_description: Server LAN
-    m_ntpServer: raspberrypi.local
-    m_websocketServer: ws://raspberrypi.local:4615
 --- !u!1001 &669288418505897793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183,6 +155,80 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5367804067315456708, guid: cfade766f1e38414e9d7a0056e79bb58, type: 3}
   m_PrefabInstance: {fileID: 669288418505897793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &915297505078410157
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7157070656713128340}
+    m_Modifications:
+    - target: {fileID: 1652926559158160340, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_Name
+      value: DNS Fail Safe
+      objectReference: {fileID: 0}
+    - target: {fileID: 2262876988509376145, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_ipv4ToPortFormats.Array.data[0].m_onUrlGeneratedWithIp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3327738595777480752}
+    - target: {fileID: 2262876988509376145, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_ipv4ToPortFormats.Array.data[1].m_onUrlGeneratedWithIp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3327738595777480752}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507349429675724418, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_onDeviceIpFound.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3327738595777480752}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+--- !u!4 &3165475811204103358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2836649022223451923, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+  m_PrefabInstance: {fileID: 915297505078410157}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4489744524381617567
 PrefabInstance:

@@ -243,6 +243,7 @@ Let check that it works: https://youtu.be/JWaKbI9fHVI?t=1856
 - http://raspberrypi.local:8080:/hostname  
 - http://raspberrypi.local:8080:/unique-id  
 - http://raspberrypi.local:8080:/push-iid  
+  - https://youtu.be/JWaKbI9fHVI?t=2041 
 - http://raspberrypi.local:8080:/reboot
 
 Make sure that the service is enable and restable:
@@ -255,6 +256,166 @@ https://youtu.be/JWaKbI9fHVI?t=1993
 
 
 
+We have pi NTP Flask, let's install the websocket server for integer.
+
+Let's clone and copy past:
+GitHub: 
+[![image](https://github.com/user-attachments/assets/c36894cb-a235-4f80-96c2-3589fb5d4675)](https://youtu.be/JWaKbI9fHVI?t=2136)
+https://youtu.be/JWaKbI9fHVI?t=2136
+https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID
+
+Install the Python Module required:
+https://youtu.be/JWaKbI9fHVI?t=2163
+```
+pip install tornado requests --break-system-packages
+```
+
+When the server and module are install it should be runnable:
+https://youtu.be/JWaKbI9fHVI?t=2362
+
+Let's check that it run:
+https://youtu.be/JWaKbI9fHVI?t=2460
+
+
+Ok ready for Unity3D ?
+
+Let's copy all the package needed, core and sample:
+https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup
+```
+   "be.elab.asymsigner": "https://github.com/EloiStree/OpenUPM_AsymmetricalClipboardCoaster.git",
+    "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysetup": "https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git",
+    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git",
+    "be.elab.pbit4096b58pkcs1sha256": "https://github.com/EloiStree/OpenUPM_pBit4096B58Pkcs1SHA256.git",
+    "be.elab.scanpioffline": "https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUMP_TickCollection.git",
+    "be.elab.timepercent": "https://github.com/EloiStree/2025_02_17_TimePercentInterface.git",
+    "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
+    "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
+    "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
+
+    "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
+    "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
+    "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",    
+"com.unity.inputsystem": "1.13.0",
+```
+
+Let's copy the package to manifest.json
+[![image](https://github.com/user-attachments/assets/729625ae-c3b9-4b29-842f-cb53daa38b1b)](https://youtu.be/JWaKbI9fHVI?t=2513)
+https://youtu.be/JWaKbI9fHVI?t=2513
+
+Let's import the demo of the prefab to use:
+[![image](https://github.com/user-attachments/assets/e7080023-46c0-4c27-8837-9724cc28c043)](https://youtu.be/JWaKbI9fHVI?t=2553)
+https://youtu.be/JWaKbI9fHVI?t=2553
+
+
+Check that time percent interface is in the project if you want to sync action with time in game:
+https://youtu.be/JWaKbI9fHVI?t=2598
+
+
+Listen ToOnlyOnceOffset will allows to push the offset between your computer and the PI from the singleton in the scene that will load the difference.
+[![image](https://github.com/user-attachments/assets/74f617c9-9884-47db-9d80-831ec5249430)](https://youtu.be/JWaKbI9fHVI?t=2647)
+https://youtu.be/JWaKbI9fHVI?t=2647
+
+But to find the raspberrypi we ened to check the 8080 and so we need to allows it.
+[![image](https://github.com/user-attachments/assets/f5200aad-dfea-4697-9811-2479fb9a062e)](https://youtu.be/JWaKbI9fHVI?t=2695)
+https://youtu.be/JWaKbI9fHVI?t=2697
+
+
+DNS Fail Safe that allow to look for hostname of the pi with Flask:
+[![image](https://github.com/user-attachments/assets/073b9a39-e250-4bbe-99bc-e260f79899c0)](https://youtu.be/JWaKbI9fHVI?t=2753)
+https://youtu.be/JWaKbI9fHVI?t=2753
+
+
+IPV4 To Ports will generate the url of the NPT, WS and HTTP from the find IP (given by DNS or Scan IP)
+[![image](https://github.com/user-attachments/assets/d929afcc-e4a9-4e1d-afe2-73cdae634d54)](https://youtu.be/JWaKbI9fHVI?t=2786)  
+https://youtu.be/JWaKbI9fHVI?t=2786
+
+
+Give he url to the face for the WS and NPT client that know the hard code behind it:
+[![image](https://github.com/user-attachments/assets/1451b46e-f3d1-431f-8f2b-1a729f29a107)](https://youtu.be/JWaKbI9fHVI?t=2801)
+https://youtu.be/JWaKbI9fHVI?t=2801
+
+The two most important script is 
+`NtpOffsetOnlyOnceMono` and `WsConnectToAsymServerMono`
+
+Check that both works:
+https://youtu.be/JWaKbI9fHVI?t=2855
+
+We can for example now set object with offset of the NPT server to element in game to sync them with the pi and so other player:
+https://youtu.be/JWaKbI9fHVI?t=2896
+
+
+But we want to send integer and received not just sync time:
+[![image](https://github.com/user-attachments/assets/af94e011-bbe8-454b-8b88-5d17b6163362)](https://youtu.be/JWaKbI9fHVI?t=2948)
+https://youtu.be/JWaKbI9fHVI?t=2948
+
+
+Let's show you the connection between the hardcode of sending and receiving the integer and give it to a static integer face ^^... This part of the video is a bit messy. I will do a better video on the topic focusing on using and not explaining.
+
+"He hide part of the code"
+https://youtu.be/JWaKbI9fHVI?t=3009
+
+If you just want to observer what is send and what is received you can use:
+[StaticIntMono_ListenIntegerReceivedFromServer](https://youtu.be/JWaKbI9fHVI?t=3182)
+[StaticIntMono_ListenIntegerSentToServer](https://youtu.be/JWaKbI9fHVI?t=3185)
+![image](https://github.com/user-attachments/assets/09ae6fe3-edc5-4dde-8eff-7fba35bb676d)
+
+
+Let's import the SpaceShip Sample of an integer multiplayer lobby. https://youtu.be/JWaKbI9fHVI?t=3254
+
+(If package.json bug, just push update:)
+[![image](https://github.com/user-attachments/assets/fa761420-d754-4fc9-a048-40cb254baa2e)](https://youtu.be/JWaKbI9fHVI?t=3283)
+https://youtu.be/JWaKbI9fHVI?t=3283
+
+
+When you copy the sample in your scene with the client.
+The facade code that use a Static C# class wil allow to link them without effort:
+[![image](https://github.com/user-attachments/assets/fc5a055d-54e9-4f4c-9a9f-0a65f0696213)](https://youtu.be/JWaKbI9fHVI?t=3353)
+https://youtu.be/JWaKbI9fHVI?t=3353
+
+
+What would look like a game where you need to kills bugs:
+[![image](https://github.com/user-attachments/assets/2d62a149-90be-4a07-900f-fce0c7a3e1db)](https://youtu.be/JWaKbI9fHVI?t=3384)
+https://youtu.be/JWaKbI9fHVI?t=3384
+
+
+Change color of the light:
+[![image](https://github.com/user-attachments/assets/4ceaa343-ace3-4420-aadb-3a858c37e055)](https://youtu.be/JWaKbI9fHVI?t=3438)
+https://youtu.be/JWaKbI9fHVI?t=3449
+
+Int Int with listen to integer to static facade
+Int Out will push integer to static facade
+[![image](https://github.com/user-attachments/assets/2de9d2cb-7cfd-43e8-9e18-ff7da1832fac)](https://youtu.be/JWaKbI9fHVI?t=3468)
+https://youtu.be/JWaKbI9fHVI?t=3468
+
+
+Send and received in Unity is not supper face and praticle.
+That could be nice if we could just make a HTML Javascript page ?
+[![image](https://github.com/user-attachments/assets/9387ea43-92e2-4587-824b-96047ed7d1eb)
+](https://youtu.be/JWaKbI9fHVI?t=3477)
+https://youtu.be/JWaKbI9fHVI?t=3477
+
+[![image](https://github.com/user-attachments/assets/6d2796f6-1696-4ee2-a76a-73c2efb28e1f)](https://youtu.be/JWaKbI9fHVI?t=3504)
+https://youtu.be/JWaKbI9fHVI?t=3504
+[http://raspberrypi.local:8080/trusted-client](http://raspberrypi.local:8080/trusted-client)
+
+Change the time , color, shield, start scene..  
+[![image](https://github.com/user-attachments/assets/43abe24d-7bf7-4c2e-ac21-aa51e5821664)](https://youtu.be/JWaKbI9fHVI?t=3610)  
+https://youtu.be/JWaKbI9fHVI?t=3610  
+
+Load a Game, Lobby and other scene with integer for example:
+[![image](https://github.com/user-attachments/assets/cfdd25a9-9fa9-4052-86e7-e046e42ea37a)](https://youtu.be/JWaKbI9fHVI?t=3638)
+https://youtu.be/JWaKbI9fHVI?t=3638
+
+
+And tada 😅 !!!
+
+Now you know the basic of how to install and use a Trusted IID APInt server 🧙‍♂️🤗
+
+[![image](https://github.com/user-attachments/assets/a144e7ab-f58a-484d-aeb9-95e02acf3a39)](https://youtu.be/JWaKbI9fHVI?t=3712)
+https://youtu.be/JWaKbI9fHVI?t=3712
 
 
 
@@ -263,23 +424,13 @@ https://youtu.be/JWaKbI9fHVI?t=1993
 
 
 
-
-
+ 
 
 
 
 
 -------------
 
-## Generate a SSH key and Git
-
-Install Git Bash from git default tool:
-
-[![image](https://github.com/user-attachments/assets/3614da4b-5efe-474b-930e-1b952e311d55)](https://git-scm.com)
-https://git-scm.com
-
-![image](https://github.com/user-attachments/assets/29c91293-6ad1-4dfe-a481-9d6f1b8919d9)
-![image](https://github.com/user-attachments/assets/89e41427-a8c9-44e5-a0c9-c08216902681)
 
 Setup your git account on the your computer if not already done.
 ```
@@ -288,89 +439,13 @@ git config --global user.name "Hello World"
 git config --global user.email "helloworl@gmail.com"  
 ```
 
-
-Put the SD car on your Pi and prepare a keyboard and mouse (if you use UI Desktop version)
-Configure all what is ask to you in the PI configuration.
-Not that you can skip the wifi setup and the update part.
-- Wifi is already setup
-- Update can be done during the reste of the tutorial.
-
-
-Now you need to generate a SSH key on Window and push it to the PI
-
-Launch `Git Bash`
-
-- Type: `cd ~/.ssh`
-- Type: `ssh-keygen``
-- Give it a name: `pikey` (for example)
-- Skip the password
-- Next Next
-![image](https://github.com/user-attachments/assets/9d1a92fe-e164-40c0-9d08-f6ee61251c7b)
-
-Now you have a public and private key on the folder User/.ssh/
-
-
-
-# Fetch Imager 
-[![image](https://github.com/user-attachments/assets/bf72e778-328f-4660-9121-8da3b3cb3fee)](https://www.raspberrypi.com/software/)
-https://www.raspberrypi.com/software/
-
-Select the PI you have:
-![image](https://github.com/user-attachments/assets/5e004b9d-7d4c-4856-88e5-46090cfae617)
-
-You want the UI Desktop 64 Bit version for less performence but more easy debug:
-![image](https://github.com/user-attachments/assets/09c92d65-d965-4109-935b-866b29dcdb45)
-
-Edit the image:
-![image](https://github.com/user-attachments/assets/a7b27a64-baa6-4f00-88bb-28ef9fcec0c4)
-
-
-Give him the name raspberrypi.local
- ![image](https://github.com/user-attachments/assets/17772edf-4548-45b7-9e14-ff9203d61ae3)
-
-Set the admin/password to user, `root`:
-![image](https://github.com/user-attachments/assets/9fd333f2-382b-4d28-8619-7e2f7f9fbf3f)
-
-Set the Wifi if you have it, I use a specific wifi for it to be able to take it with me when I move and use it offline.
-My Wifi router name is raspberrypi.local and raspberrypi.local_5G
-If you use zero, use the 2G
-
-![image](https://github.com/user-attachments/assets/41367cf8-571a-43d4-bf49-2e6db791db06)
-
-Key the password the time to install what you need:
-![image](https://github.com/user-attachments/assets/9203a5f4-87da-4660-b311-8f5899f222b5)
-
-
-Copy your ssh key in the ssh form
-![image](https://github.com/user-attachments/assets/b40c8934-ce62-41f5-9047-cc184b0e38b7)
-
-
-Install and wait the SD card to be ready:
-![image](https://github.com/user-attachments/assets/2d36fc36-2224-44b9-85dd-5af4950c36bb)
-
-
-Connect to your root user of the pi in Git Bash:  
-![image](https://github.com/user-attachments/assets/50ca1bb7-947d-4e07-966a-c8504291c0ef)
-
-
-if pi don't connect directly to Wifi:
-su root
 sudo raspi-config
-![image](https://github.com/user-attachments/assets/2cf078b1-795c-4873-9c7a-024e431f55c4)
-![image](https://github.com/user-attachments/assets/f6d4d489-ea3e-4220-a6a6-0dc09f246cfd)
-![image](https://github.com/user-attachments/assets/32fa6363-d8f6-4a7e-a422-6f7da374ac60)
-![image](https://github.com/user-attachments/assets/7f31bda5-e72b-435c-b0bb-b5e39366e09a)
-
-Check that the pi exists:
- ping raspberrypi
+ping raspberrypi
 
 
 sudo rpi
 sudo apt install rpi-connect-lite
 https://connect.raspberrypi.com/verify/8SF4-TYBZ
-
-
-Add your key:
 
 `sudo nano ~/.ssh/authorized_keys`
 Ou 
@@ -378,12 +453,6 @@ Ou
 ssh-copy-id -i ~/.ssh/pikey.pub root@raspberrypi
 ssh-copy-id -i ~/.ssh/eloistree_all_pi.pub root@raspberrypi
 ```
-
-Restart SSH:
-```
-sudo systemctl status ssh
-```
-
 
 ```
 sudo apt update 

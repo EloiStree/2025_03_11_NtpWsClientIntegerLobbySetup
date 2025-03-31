@@ -1,15 +1,15 @@
-# 🤗 Welcome 🧙‍♂️
+# 🤗 Welcome, Adventurer! 🧙‍♂️  
 
-I am designing some tool to make multiplayer game and network application using only integer and time.
+I'm working on a tool for building multiplayer games and network applications using only integers and time.  
 
-I have two type of server:
-- Trusted: We don't care of security
-- Asymmertical: You user to authentify.
+There are two types of servers:  
+- **Trusted**: No security concerns.  
+- **Asymmetrical**: Users authenticate themselves.  
 
-Server is design to be hosted on Raspberry Pi. 
+The server is designed to run on a Raspberry Pi.  
 
-If you like the concept, you are in the right place.  
-Feel free to ping me 🐿️ at anytime on [Discord](https://discord.gg/uKwNN2ECJH).  
+If this sounds interesting to you, you're in the right place!  
+Feel free to reach out 🐿️ anytime on [Discord](https://discord.gg/uKwNN2ECJH).
 
 ----------------
 

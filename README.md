@@ -99,9 +99,11 @@ https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi
   - Handles WebSocket and RSA authentication with APInt.  
   - [`be.elab.wsclientiid`](https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git)  
 - **WebSocket Connection Management with Asymmetrical Keys**  
-  - Maintains an active connection and handles reconnections automatically.  
+  - Maintains an active connection and handless reconnections automatically.  
   - [`be.elab.wsasymauth`](https://github.com/EloiStree/OpenUPM_WsAsymAuth)  
-
+- **Scan Raspberry Pi Offline
+  - Allows to find Raspberry Pi when the lobby is offline on LAN on Quest3
+  - [`be.elab.scanpioffline`](https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git)
 
 
 ####  `package.json` Example for a Lobby 

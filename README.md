@@ -123,6 +123,11 @@ I use IID instead of text for a reason: **to prevent hacks, crashes, KISS concep
 - Use `StaticIntMono_ListenIntegerSendToServer` to listen for outgoing integers from players and relay them.
 
 
+### Test your code with the Flask project
+- On Flask code call : http://raspberrypi.local:8080/trusted-client
+  - Page code: https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID/blob/main/www/trusted/RunClient.html
+  - Host on GitHub:  https://eloistree.github.io/2025_01_01_FlaskServerAPIntIID/www/trusted/RunClient.html
+_(Note you need to disable secure page on the browser)_
 
 ### Package explained
 - **Lobby System with Drag-and-Drop Sample & Prefab**  

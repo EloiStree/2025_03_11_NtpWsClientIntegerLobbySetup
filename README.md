@@ -77,7 +77,7 @@ To set up the integer-based multiplayer system, you'll need the following:
 
 > From the start, I've designed the Unity3D client around RSA (ECC) asymmetric keys 😅.  
 > Even if you don’t use them, my code still relies on an understanding of RSA asymmetric keys.  
-> Some packages are unnecessary for the `Trusted Server`.  
+> Some packages are unnecessary for the `Trusted Server` but still required.
 
 You can copy the following code into your `package.json` file within your Unity3D project folder.
 

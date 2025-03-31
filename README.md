@@ -11,6 +11,11 @@ The server is designed to run on a Raspberry Pi.
 If this sounds interesting to you, you're in the right place!  
 Feel free to reach out 🐿️ anytime on [Discord](https://discord.gg/uKwNN2ECJH).
 
+_Step-by-step for Trusted Server_:  
+- [Guide](https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup/blob/main/InstallTrustedStepByStep.md)
+- 
+ 
+
 ----------------
 
 # Trusted version: NTP WebSocket Client
@@ -230,9 +235,7 @@ ls apint*
 
 ---------------------------------
 
-### Old tutorrial on the Assymetrical version before reforge of the code to make ETH and MetaMask les focused in the project.
-
-#### If you want a server with assymetrical authentification
-
-[![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
-https://youtu.be/7vQYGOoEILQ  
+Log without the `config` file
+```
+ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
+```

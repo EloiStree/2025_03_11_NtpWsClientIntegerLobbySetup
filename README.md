@@ -159,9 +159,11 @@ You can add those package and add the sample scene of "Int Lobby Sample space Sh
   - Look at the Solar System Demo (you need to add the offset yourself)
 - https://github.com/EloiStree/2025_02_22_TimePercentInterfaceBezier
   - Allows to make object follow Bezier curve base on the time going on as percent with NTP server
-    
+- https://github.com/EloiStree/2025_02_17_UnityMacroSRT.git
+  - Allows to store event that need to happens at a precise timing in a SRT format (used for subtitle in video).
+     
 If you don't want to make complicated code, trigger from NTP event some Unity3D Timeline.
-(Code not done yet)
+(Not code yet)
 
 ----------------
 

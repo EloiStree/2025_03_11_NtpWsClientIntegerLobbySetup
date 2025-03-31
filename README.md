@@ -20,13 +20,13 @@ More about: [Index Integer Date (IID)](https://github.com/EloiStree/IID)
 By default, the project is set up to use:  
 - **NTP Server:** `raspberrypi.local`  
 - **IID APInt Server:** `ws://raspberrypi.local:4625/`
-- Ports:
- - 22: SSH connection to your PI 
- - 123: Network Time Protocole
- - 4625: Trusted server to make the lobby
- - 8080: Flask server to debug and be found by Ip scan
- - 4615: Assymetrical server (if you want authentification server)
- - 3615: UDP Trusted relay (if you need UDP relay)
+- **Ports**:
+  - **22**: SSH connection to your PI  
+  - **123**: Network Time Protocole
+  - **4625**: Trusted server to make the lobby
+  - **8080**: Flask server to debug and be found by Ip scan
+  - **4615**: Assymetrical server (if you want authentification server)
+  - **3615**: UDP Trusted relay (if you need UDP relay)
 
 
 ### Requirements (Raspberry Pi 4/5)  

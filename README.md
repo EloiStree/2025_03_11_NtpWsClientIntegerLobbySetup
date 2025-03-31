@@ -1,20 +1,5 @@
 
 
-# How to use ?
-
-
-
-If you like the tool, you can send me a beer:
-- https://buymeacoffee.com/apintio
-  
-Or buy some Raspberry PI equipement on Amazon:   
-- https://github.com/EloiStree/HelloInput/issues?q=hardware  
-- https://github.com/EloiStree/HelloRaspberryPiDevKitCM5
-  
-The code is under ["Pizza License"🍕](https://github.com/EloiStree/License)  
-
-----------------
-
 # NTP WebSocket Client Integer Lobby Setup  
 
 This tool enables integer-based multiplayer functionality using an APInt IO server.  
@@ -175,7 +160,13 @@ ls apint*
 
 
 
-# Step by Step
-## If you want remote with authentification player.
+
+# How to use ?
+
+## If you want a trusted werver without authentification on LAN
+
+To Add.
+
+## If you want a server with assymetrical authentification
 [![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
 https://youtu.be/7vQYGOoEILQ  

@@ -63,6 +63,7 @@ This setup integrates multiple packages:
     "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
     "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
     "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+    "be.elab.scanpioffline": "https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git",
 
 ```
 

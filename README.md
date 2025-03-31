@@ -200,13 +200,13 @@ If you prefer a simpler approach, you can trigger Unity3D **Timelines** based on
 
 ----------------
 
-# OTHER NOTE
+### OTHER NOTE
 
-## Control a Meross Switch with Unity3D
+#### Control a Meross Switch with Unity3D
 
 - https://github.com/EloiStree/2024_12_13_IntegerToMerossFromPython
 
-## Control a Govee Light with Unity3D
+#### Control a Govee Light with Unity3D
  
 - https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
 
@@ -225,9 +225,9 @@ ls apint*
 
 ---------------------------------
 
-# Old tutorrial on the Assymetrical version before reforge of the code to make ETH and MetaMask les focused in the project.
+### Old tutorrial on the Assymetrical version before reforge of the code to make ETH and MetaMask les focused in the project.
 
-## If you want a server with assymetrical authentification
+#### If you want a server with assymetrical authentification
 
 [![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
 https://youtu.be/7vQYGOoEILQ  

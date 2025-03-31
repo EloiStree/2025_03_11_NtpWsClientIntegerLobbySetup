@@ -1,8 +1,8 @@
 
 # Trusted version: NTP WebSocket Client Integer Lobby Setup 
 
-This tool enables integer-based multiplayer lobby using an APInt IO server. 
-_(Trusted is a version that don't use password and/or authentification.)_
+This tool enables integer-based multiplayer lobby using an APInt IO server.   
+_(Trusted is a version that don't use password and/or authentification.)_  
 
 
 

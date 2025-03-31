@@ -1,8 +1,7 @@
 
 
 # How to use ?
-[![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
-https://youtu.be/7vQYGOoEILQ  
+
 
 
 If you like the tool, you can send me a beer:
@@ -165,7 +164,6 @@ git config --global user.name "Ano Nymous"
 git config --global user.email AnoNymous@gamil.com  
 ```
 
-
 Find service:
 
 ```
@@ -173,3 +171,11 @@ cd /etc/systemd/system
 ls apint*
 ```
 
+
+
+
+
+# Step by Step
+## If you want remote with authentification player.
+[![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
+https://youtu.be/7vQYGOoEILQ  

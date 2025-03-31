@@ -97,14 +97,17 @@ You can copy the following code into your `package.json` file within your Unity3
 So I install Flask Server on Pi then scan for LAN IP `$"http://{ipv4}:8080/hostame"` when DNS failed
 
 
-### **Client Int Lobby Setup**  
+### **Client Integer Lobby Setup**  
 
-Drag and drop the `Client Int Lobby DNS Fail Safe Trusted` prefab into your scene.  
+Simply drag and drop the **"Client Int Lobby DNS Fail Safe Trusted"** prefab into your scene.  
 
-This prefab includes an NTP client that connects to a server without authentication, relaying sent and received integers to a static class accessible in Unity3D.  
-- If the DNS fails, it scans for `$"http://{ipv4}:8080/hostname"` to check if the device is a `raspberrypi`.  
-- It utilizes port `4625` for an unencrypted, trusted WebSocket server that simply relays received integers (≤16 bytes).    
-I use IID instead of text for a reason: **prevent hacks, crashes, bandwidth bottlenecks, text is "slow"**.      
+This prefab includes an NTP client that connects to a server without authentication, forwarding received and sent integers to a static class accessible in Unity3D.  
+
+- If DNS resolution fails, it scans `http://{ipv4}:8080/hostname` to verify if the device is a `raspberrypi`.  
+- If multiple Raspberry Pis are in use (e.g., in a classroom setting), you can scans `http://{ipv4}:8080/unique-id` instead to identify the correct device.  
+- Uses port `4625` to communicate with an unencrypted, trusted WebSocket server that relays received integers (≤16 bytes).  
+
+I use IID instead of text for a reason: **to prevent hacks, crashes, KISS concept, and bandwidth issues—text are "slow."**  
 
 #### Usage:  
 - **Receiving Integers:** Use `StaticIntMono_ListenIntegerReceivedFromServer` to get integers from other players.  

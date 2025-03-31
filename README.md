@@ -1,3 +1,17 @@
+🤗 Welcome 🧙‍♂️
+
+I am designing some tool to make multiplayer game and network application using only integer and time.
+
+I have two type of server:
+- Trusted: We don't care of security
+- Asymmertical: You user to authentify.
+
+Server is design to be hosted on Raspberry Pi. 
+
+If you like the concept, you are in the right place.  
+Feel free to ping me 🐿️ at anytime on [Discord](https://discord.gg/uKwNN2ECJH).  
+
+----------------
 
 # Trusted version: NTP WebSocket Client Integer Lobby Setup 
 

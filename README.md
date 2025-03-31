@@ -239,6 +239,14 @@ cd /etc/systemd/system
 ls apint*
 ```
 
+
+
+-------------
+
+Note for PI Zero: 
+- dont use Zero on USB of your computer, it don't provide enought current.
+
+
 ---------------------------------
 
 Log without the `config` file

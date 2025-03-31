@@ -13,12 +13,9 @@ Feel free to reach out 🐿️ anytime on [Discord](https://discord.gg/uKwNN2ECJ
 
 ----------------
 
-# Trusted version: NTP WebSocket Client Integer Lobby Setup 
+# Trusted version: NTP WebSocket Client
 
-This tool enables integer-based multiplayer lobby using an APInt IO server.   
-_(Trusted is a version that don't use password and/or authentification.)_  
-
-
+This tool enables integer-based multiplayer lobby using an `APInt.IO` server.   
 
 ### **Understanding the Index Integer Date (IID) Concept**  
 

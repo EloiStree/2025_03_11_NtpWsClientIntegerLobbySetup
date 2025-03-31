@@ -21,52 +21,65 @@ _(Trusted is a version that don't use password and/or authentification.)_
 
 
 ### **Understanding the Index Integer Date (IID) Concept**  
+
 The lobby system is based on the **Index Integer Date (IID)** model:  
 
 - **Index** – A unique identifier used as an asymmetric key for authentication on the WebSocket server.  
-- **Integer** – The numerical values shared between computers/games in the shared lobby.  
-- **Date** – If all players use the same NTP server, game actions can be synchronized **without needing network communication**.  
-More about: [Index Integer Date (IID)](https://github.com/EloiStree/IID)  
+- **Integer** – The numerical values exchanged between computers/games in the shared lobby.  
+- **Date** – All players use UTC time in milliseconds, synchronized with a time protocol server.  
+
+Learn more: [Index Integer Date (IID)](https://github.com/EloiStree/IID)
 
 
 ### **Default Project Configuration**  
 
-By default, the project is set up to use:  
+The project comes pre-configured with the following setup:  
+
 - **NTP Server:** `raspberrypi.local`  
-- **IID APInt Server:** `ws://raspberrypi.local:4625/`
-- **Ports**:
-  - **22**: SSH connection to your PI  
-  - **123**: Network Time Protocole
-  - **4625**: Trusted server to make the lobby
-  - **8080**: Flask server to debug and be found by Ip scan
-  - **4615**: Assymetrical server (if you want authentification server)
-  - **3615**: UDP Trusted relay (if you need UDP relay)
+- **IID APInt Server:** `ws://raspberrypi.local:4625/`  
+
+- **Ports:**  
+  - **22** – SSH access to your Raspberry Pi  
+  - **123** – Network Time Protocol (NTP)  
+  - **4625** – Trusted server for lobby management  
+  - **8080** – Flask server for debugging and IP discovery  
+
+- **Optional Ports:**  
+  - _**4615** – Asymmetrical server (for authentication, if needed)_  
+  - _**3615** – UDP Trusted relay (for pushing UDP data to the WebSocket server)_  
+  - _**7000** – UDP Broadcaster (for sending integers to other applications on the device)_  
+
+### **Requirements (Raspberry Pi 4/5)**  
+
+To set up the integer-based multiplayer system, you'll need the following:  
+
+- **PI Connection & SSH**: [Setup Guide](https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13)  
+  - Configure your Raspberry Pi for remote debugging.  
+  - Add a public key for SSH-based debugging.  
+
+- **NTP Server**: [Setup Guide](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
+  - Synchronize the Pi's clock to ensure all players/users have the same time reference.  
+
+- **Flask Debug Server**: [Installation Guide](https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID/)  
+  - Set up a lightweight web server for debugging the Pi’s state.  
+  - Add a page at `8080/hostname` to retrieve the Pi’s name (useful when mDNS fails).  
+  - Add a page at `8080/unique-id` to return the Pi’s hardware ID.  
+
+- **Trusted Integer Server**: [Setup Guide](https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID)  
+  - Install a WebSocket server that processes compact (≤16 bytes) data packets and broadcasts them to all connected players/users.  
+
+- **Optional: Asymmetrical Integer Server**: [Installation Guide](https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID)  
+  - Required if you need an authenticated, shared integer-based lobby for online multiplayer.  
+  - More details in the [README](https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID/blob/main/README.md).  
 
 
-### Requirements (Raspberry Pi 4/5)  
+### **Unity3D**  
 
-To set up the integer multiplayer system, you need the following:  
-- **PI Connect and SSH**: https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13
-  - Let's configure your PI connection to debug online
-  - Let's add public key to debug from SSH connection 
-- **NTP Server:** https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer
-  - Let's give a time protocole to the PI for player/user to have the same clock 
-- **Flask:** https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID/
-  - Let's install a small website to debug the PI state
-  - Let's add a page 8080/hostname that return the current name of the PI for when mDNS don't work
-  - Let's add a page 8080/unique-id that return the current hardware id of the PI when you want `that PI` 
-- **Trusted Integer Server:** https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID 
-  - Let's intall a websocket that only do one thing, take less that 16 bytes packages and broadcast it to all connected player/user. 
-- Optional: **Assymetrical Integer Server:** https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID
-  - This server is when you want to make mutualized with authentification Integer Lobby on a PI Online
-  - More about it in the [ReadMe.md](https://github.com/EloiStree/2025_01_01_AsymmetricServerAPIntIID/blob/main/README.md)
+> From the start, I've designed the Unity3D client around RSA (ECC) asymmetric keys 😅.  
+> Even if you don’t use them, my code still relies on an understanding of RSA asymmetric keys.  
+> Some packages are unnecessary for the `Trusted Server`.  
 
-
-### Untiy3D
-
-I designed the Unity3D Client around RSA assymetrical key.
-So if you don't use them, my code still need those understanding of what is RSA and Asym key.
-You can copy those code in your `package.json` in the Unity3D project folder.
+You can copy the following code into your `package.json` file within your Unity3D project folder.
 
 #### `package.json` Dependencies  
 ```json
@@ -138,46 +151,52 @@ I use IID instead of text for a reason: **prevent hacks, crashes, bandwidth bott
   - [`be.elab.scanpioffline`](https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git)
 
 
-####  `package.json` Example for a Lobby 
+## **`package.json` Examples**  
 
-If you want ane example of how you can use the tools to make a intger multiplayer game.
-You can add those package and add the sample scene of "Int Lobby Sample space Ship"
+### **Example for a Lobby System**  
 
-```
+If you want to create an integer-based multiplayer game, you can add the following packages to your `package.json`. Then, use the **"Int Lobby Sample Space Ship"** scene as a starting point.  
+
+```json
     "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
     "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
     "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
     "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
     "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
-    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git",
-
+    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git"
 ```
 
-- Enables associating integers with actions:  
+### **Package Breakdown**  
+- **Associating integers with actions:**  
   - [OpenUPM Basic Action IID](https://github.com/EloiStree/OpenUPM_BasicActionIID)  
-  - Requires IID to function:  
+  - Requires the IID system:  
     - [OpenUPM IID](https://github.com/EloiStree/OpenUPM_IID.git)  
-- A sample demonstrating how to create an integer-based lobby game:  
-  - [Integer Lobby Sample Spaceship](https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship)  
-  - Requires the Integer Lobby Facade:  
-    - [Integer Lobby Facade](https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git)  
-- A toolbox for exporting integers with compressed data:  
-  - [OpenUPM Push Generic IID](https://github.com/EloiStree/OpenUPM_PushGenericIID.git)
-- A tool that allows to create documentation on what integer do what in the app/game in Unity3D
-  - [Integer Mapping](https://github.com/EloiStree/2025_03_16_IntegerMapping.git) 
 
+- **Creating an integer-based lobby game:**  
+  - Sample: [Integer Lobby Sample Spaceship](https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship)  
+  - Requires: [Integer Lobby Facade](https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git)  
 
-####  `package.json` Example for a Outer Wild style game
+- **Additional utilities:**  
+  - **Exporting integers with compressed data:** [OpenUPM Push Generic IID](https://github.com/EloiStree/OpenUPM_PushGenericIID.git)  
+  - **Mapping integers to their functions in the app/game:** [Integer Mapping](https://github.com/EloiStree/2025_03_16_IntegerMapping.git)  
 
-- https://github.com/EloiStree/2025_02_17_TimePercentInterface
-  - Look at the Solar System Demo (you need to add the offset yourself)
-- https://github.com/EloiStree/2025_02_22_TimePercentInterfaceBezier
-  - Allows to make object follow Bezier curve base on the time going on as percent with NTP server
-- https://github.com/EloiStree/2025_02_17_UnityMacroSRT.git
-  - Allows to store event that need to happens at a precise timing in a SRT format (used for subtitle in video).
-     
-If you don't want to make complicated code, trigger from NTP event some Unity3D Timeline.
-(Not code yet)
+---
+
+### **Example for an Outer Wilds-Style Game**  
+
+If you want to create a time-based system similar to *Outer Wilds*, consider these packages:  
+
+- **[Time Percent Interface](https://github.com/EloiStree/2025_02_17_TimePercentInterface)**  
+  - Includes a Solar System Demo (requires manual time offset adjustment).  
+
+- **[Time Percent Interface Bezier](https://github.com/EloiStree/2025_02_22_TimePercentInterfaceBezier)**  
+  - Allows objects to follow a Bezier curve based on time progression (synchronized with an NTP server).  
+
+- **[Unity Macro SRT](https://github.com/EloiStree/2025_02_17_UnityMacroSRT.git)**  
+  - Enables scheduling events at precise times using **SRT format** (commonly used for subtitles in videos).  
+
+If you prefer a simpler approach, you can trigger Unity3D **Timelines** based on NTP events _(not coded yet)_.
+
 
 ----------------
 

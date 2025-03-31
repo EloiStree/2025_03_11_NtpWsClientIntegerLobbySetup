@@ -210,14 +210,19 @@ If you prefer a simpler approach, you can trigger Unity3D **Timelines** based on
  
 - https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
 
-Don't forget the Git:
+#### Discord and Twitch Chat
+
+I have a code that allows to use Bot on Twitch and Discord:
+More about it on [https://apint.io](https://apint.io)
+
+Don't forget to set your user and mail on the Pi Git 😉:
 ```
 git config --global pull.rebase false 
 git config --global user.name "Ano Nymous"  
 git config --global user.email AnoNymous@gamil.com  
 ```
 
-Find service:
+Find APInt services install on the Pi:
 ```
 cd /etc/systemd/system
 ls apint*

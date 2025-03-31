@@ -11,10 +11,7 @@ The server is designed to run on a Raspberry Pi.
 If this sounds interesting to you, you're in the right place!  
 Feel free to reach out 🐿️ anytime on [Discord](https://discord.gg/uKwNN2ECJH).
 
-_Step-by-step for Trusted Server_:  
-- [Guide](https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup/blob/main/InstallTrustedStepByStep.md)
-- 
- 
+
 
 ----------------
 

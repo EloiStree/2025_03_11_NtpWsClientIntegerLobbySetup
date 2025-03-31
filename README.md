@@ -1,23 +1,10 @@
 
+# Trusted version: NTP WebSocket Client Integer Lobby Setup 
 
-# NTP WebSocket Client Integer Lobby Setup  
+This tool enables integer-based multiplayer lobby using an APInt IO server. 
+_(Trusted is a version that don't use password and/or authentification.)_
 
-This tool enables integer-based multiplayer functionality using an APInt IO server.  
 
-### Requirements (Raspberry Pi 4/5)  
-To set up the integer multiplayer system, you need the following:  
-- **NTP Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer)  
-- **Integer Server:** [GitHub Repository](https://github.com/EloiStree/2025_01_01_HelloMetaMaskPushToIID)  
-- **Client (Python/JavaScript/flask):** [GitHub Repository](https://github.com/EloiStree/2025_03_14_WsNtpIntRaspberryPiClientPyJS)  
-
-> Note: To setup your Raspberry PI, you want a SSH and Pi Connect access.
-> Find here a tutorial on the topic: [https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13](https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13)
-
-### **Client Int Lobby Setup**  
-Drag and drop the `Client Int Lobby` prefab into your scene.  
-
-- Use `StaticIntLobbyMono_ListenLobby` to **listen** for integers sent by other players.  
-- Use `StaticIntLobbyMono_PushToLobby` to **send** integers to other players in the lobby.  
 
 ### **Understanding the Index Integer Date (IID) Concept**  
 The lobby system is based on the **Index Integer Date (IID)** model:  
@@ -29,23 +16,31 @@ The lobby system is based on the **Index Integer Date (IID)** model:
 ### **Default Project Configuration**  
 By default, the project is set up to use:  
 - **NTP Server:** `raspberrypi.local`  
-- **IID APInt Server:** `ws://raspberrypi.local:4615/`  
+- **IID APInt Server:** `ws://raspberrypi.local:4625/`
+_(4625: Trusted server - 4615: Assymetrical server - 3615: UDP Trusted relay)_
 
-If you're using the **default image configuration**, the server address is **`raspberrypi.local`**.  
-For the **online default server**, use **`apint.ddns.net`**.
 
-### **Security and Authentication**  
-This tool is designed to eliminate the need for a database with emails and passwords. To enable a lobby, you must **add a public key** to the APInt server.  
+### Requirements (Raspberry Pi 4/5)  
 
-There are **two types of authentication**:  
+To set up the integer multiplayer system, you need the following:  
+- **PI Connect and SSH**: https://github.com/EloiStree/HelloRaspberryPiDevKitCM5/issues/13
+- **NTP Server:** https://github.com/EloiStree/2025_01_01_HelloPiOsNtpServer
+- **Flask:** https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID/  
+- **Integer Server:** https://github.com/EloiStree/2025_01_01_TrustedServerAPIntIID
 
-1. **RSA Only (`pBit4096B58Pkcs1SHA256` format)**  
-   - Works well but is **not suitable for eSports** because losing the key means **it cannot be recovered**.  
 
-2. **ETH-backed RSA (using MetaMask for Letter Mark authentication)**  
-   - Uses MetaMask as a **backup solution**, allowing an RSA key to perform actions on its behalf.  
-   - If your RSA key is stolen, you can still **prove ownership** of the `Index` to the admin via MetaMask.  
 
+
+### **Client Int Lobby Setup**  
+
+Drag and drop the `Client Int Lobby DNS Fail Safe Trusted` prefab into your scene.  
+
+- Use `StaticIntMono_ListenIntegerReceivedFromServer` to **receive** integers from other players.  
+- Use `StaticIntMono_PushUnityToServer` to **send** integers to other players in the lobby.  
+
+If setting up a custom connection:  
+- Forward received integers from other players to `StaticIntMono_PushServerToUnity`.  
+- Forward integers sent by the current player from `StaticIntMono_ListenIntegerSendToServer` to your system.
 
 
 ### Included Tools  
@@ -67,11 +62,10 @@ This setup integrates multiple packages:
 
 ```
 
-DNS Fail Safe: Apparently Quest don't handle mDNS.   
+**DNS Fail Safe**: Apparently Quest don't handle mDNS.   
 Meaning that if you are working with DNS of a LAN Raspberry PI.  
-What we don in this projet for those who host they own home server.  
-You need to scan for LAN IP.  
-https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi  
+What we do for those who host they own home server.  
+You need to scan for LAN IP `$"http://{ipv4}:8080/hostame"`  
 
 
 ### Features  
@@ -114,8 +108,8 @@ https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi
     "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
     "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
     "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
-
 ```
+
 - Enables associating integers with actions:  
   - [OpenUPM Basic Action IID](https://github.com/EloiStree/OpenUPM_BasicActionIID)  
   - Requires IID to function:  
@@ -132,9 +126,17 @@ https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi
 
 
 
+####  `package.json` Example for a Outer Wild style game
+
+- https://github.com/EloiStree/2025_02_17_TimePercentInterface
+  - Look at the Solar System Demo (you need to add the offset yourself)
+
+If you don't want to make complicated code, trigger from NTP event some Unity3D Timeline.
+(Code not done yet)
+
 ----------------
 
-# Also
+# OTHER NOTE
 
 ## Control a Meross Switch with Unity3D
 
@@ -144,7 +146,6 @@ https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi
  
 - https://github.com/EloiStree/2025_03_19_IntegerToGoveeFromPython
 
-
 Don't forget the Git:
 ```
 git config --global pull.rebase false 
@@ -153,23 +154,16 @@ git config --global user.email AnoNymous@gamil.com
 ```
 
 Find service:
-
 ```
 cd /etc/systemd/system
 ls apint*
 ```
 
+---------------------------------
 
-
-
-
-
-# How to use ?
-
-## If you want a trusted werver without authentification on LAN
-
-To Add.
+# Old tutorrial on the Assymetrical version before reforge of the code to make ETH and MetaMask les focused in the project.
 
 ## If you want a server with assymetrical authentification
+
 [![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
 https://youtu.be/7vQYGOoEILQ  

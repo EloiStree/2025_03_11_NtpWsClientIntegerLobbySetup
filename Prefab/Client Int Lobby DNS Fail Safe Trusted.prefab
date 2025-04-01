@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 3372544376229281753}
   - component: {fileID: 7588605564093627977}
   - component: {fileID: 5287909347002912076}
+  - component: {fileID: 777040854156665682}
   m_Layer: 5
   m_Name: Received Int
   m_TagString: Untagged
@@ -174,7 +175,19 @@ MonoBehaviour:
   m_receivedInteger: 0
   m_onIntegerReceivedFromServer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 777040854156665682}
+        m_TargetAssemblyTypeName: Eloi.IntegerLobby.IntMono_DebugReceivedValue, be.elab.basicactioniid
+        m_MethodName: PushIn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onIntegerReceivedFromServerAsString:
     m_PersistentCalls:
       m_Calls:
@@ -191,6 +204,51 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_catchException: 0
+--- !u!114 &777040854156665682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867905742699588454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 506589d921f83034eb2a821766cd8416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_receivedValue: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+--- !u!1 &1899111070835148799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2155241361931219315}
+  m_Layer: 0
+  m_Name: Manual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2155241361931219315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899111070835148799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5628603165213349976}
+  m_Father: {fileID: 7157070656713128340}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2320912800520908194
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +754,56 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &5390632540380504805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5628603165213349976}
+  - component: {fileID: 7254401652813222948}
+  m_Layer: 0
+  m_Name: Install Pi Server
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5628603165213349976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390632540380504805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2155241361931219315}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7254401652813222948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390632540380504805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf659bc5e0dd81546b1a80b7e344a10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_link:
+    m_videoLink:
+      m_youtubeVideoId: JWaKbI9fHVI
+      m_thumbnailType: 0
+    m_thumbnail: {fileID: 0}
+    m_thumbnailUrl: https://img.youtube.com/vi/JWaKbI9fHVI/default.jpg
 --- !u!1 &5623183022420043460
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7157070656713128340}
+  - component: {fileID: 5004848706657916736}
   m_Layer: 0
   m_Name: Client Int Lobby DNS Fail Safe Trusted
   m_TagString: Untagged
@@ -913,6 +1022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2155241361931219315}
   - {fileID: 3165475811204103358}
   - {fileID: 1486086129425262399}
   - {fileID: 4843497262962158981}
@@ -920,6 +1030,21 @@ Transform:
   - {fileID: 3485042880444045078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5004848706657916736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8459136081187859253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1ebc61c0924ff489bd1b8f2aafe6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_note:
+    m_textNote: Allows to make a connection to a Raspberry Pi on the local networks
+      to share integer between devices without authentification.
 --- !u!1001 &669288418505897793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1035,6 +1160,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7157070656713128340}
     m_Modifications:
+    - target: {fileID: 57797941201156652, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1652926559158160340, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
       propertyPath: m_Name
       value: DNS Fail Safe
@@ -1173,7 +1302,7 @@ PrefabInstance:
       objectReference: {fileID: 3327738595777480752}
     - target: {fileID: 6177996630061355213, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
       propertyPath: m_launchScanAtEnable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6177996630061355213, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
       propertyPath: m_onFoundIp.m_PersistentCalls.m_Calls.Array.size
@@ -1273,7 +1402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6596576552277015404, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
       propertyPath: m_startScanAtEnable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6596576552277015404, guid: 975d5cec2e7b84c419b67485d40ab08d, type: 3}
       propertyPath: 'm_scanToLaunch.Array.data[0]'

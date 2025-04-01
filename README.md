@@ -11,6 +11,8 @@ The server is designed to run on a Raspberry Pi.
 If this sounds interesting to you, you're in the right place!  
 Feel free to reach out 🐿️ anytime on [Discord](https://discord.gg/uKwNN2ECJH).
 
+
+
 ----------------
 
 # Trusted version: NTP WebSocket Client
@@ -118,6 +120,12 @@ I use IID instead of text for a reason: **to prevent hacks, crashes, KISS concep
 - Use `StaticIntMono_ListenIntegerSendToServer` to listen for outgoing integers from players and relay them.
 
 
+### Test your code with the Flask project
+- On Flask code call : http://raspberrypi.local:8080/trusted-client  
+  - Page code: https://github.com/EloiStree/2025_01_01_FlaskServerAPIntIID/blob/main/www/trusted/RunClient.html  
+  - Host on GitHub:  https://eloistree.github.io/2025_01_01_FlaskServerAPIntIID/www/trusted/RunClient.html  
+
+_(Note you need to disable secure page on the browser)_
 
 ### Package explained
 - **Lobby System with Drag-and-Drop Sample & Prefab**  
@@ -228,11 +236,17 @@ cd /etc/systemd/system
 ls apint*
 ```
 
+
+
+-------------
+
+Note for PI Zero: 
+- dont use Zero on USB of your computer, it don't provide enought current.
+
+
 ---------------------------------
 
-### Old tutorrial on the Assymetrical version before reforge of the code to make ETH and MetaMask les focused in the project.
-
-#### If you want a server with assymetrical authentification
-
-[![image](https://github.com/user-attachments/assets/e4ce2614-0e97-470b-b7ff-e9b656a9809f)](https://youtu.be/7vQYGOoEILQ)  
-https://youtu.be/7vQYGOoEILQ  
+Log without the `config` file
+```
+ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
+```

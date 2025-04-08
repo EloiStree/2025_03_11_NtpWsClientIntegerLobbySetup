@@ -254,11 +254,3 @@ ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
 
 
 ----------
-
-# Is it simple to host a Hamachi on the PI ?
-
-(Wondering as I am working on Shadow and need to access the Pi on my network when testing around)
-
-Yes, and No.
-[![image](https://github.com/user-attachments/assets/c1631e3d-ad29-4aaf-839d-095df71e3e4b)](https://youtu.be/8ZgIgb3o_3Q?t=407)
-https://youtu.be/8ZgIgb3o_3Q?t=407

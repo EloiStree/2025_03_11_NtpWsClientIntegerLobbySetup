@@ -1,0 +1,1 @@
+https://github.com/EloiStree/OpenUPM_DeveloperNote.git

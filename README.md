@@ -252,5 +252,8 @@ ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
 ```
 
 
+- Note open port 5353 for to allow raspberry pi.
+
+
 
 ----------

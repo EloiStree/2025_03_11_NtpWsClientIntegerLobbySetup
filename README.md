@@ -258,3 +258,27 @@ ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
 
 
 ----------
+
+
+
+# Last drop package version
+
+```
+   "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
+    "be.elab.pushgenericintegerdate": "https://github.com/EloiStree/OpenUPM_PushGenericIID.git",
+    "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
+    "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
+    "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+    "be.elab.timepercent": "https://github.com/EloiStree/2025_02_17_TimePercentInterface.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysetup": "https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git",
+    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git",
+    "be.elab.scanpioffline": "https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git",
+    "be.elab.primitiverelay": "https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay.git",
+    "be.elab.quickgitutility": "https://github.com/EloiStree/OpenUPM_QuickGitUtility.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUPM_TickCollection.git",
+    "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
+    "be.elab.unitypackagefacilitator": "https://github.com/EloiStree/OpenUPM_UnityPackageFacilitator.git",
+    "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
+    "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
+```

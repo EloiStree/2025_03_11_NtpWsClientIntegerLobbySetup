@@ -41,7 +41,8 @@ The project comes pre-configured with the following setup:
   - **22** – SSH access to your Raspberry Pi  
   - **123** – Network Time Protocol (NTP)  
   - **4625** – Trusted server for lobby management  
-  - **8080** – Flask server for debugging and IP discovery  
+  - **8080** – Flask server for debugging and IP discovery
+  - **5353** - Open to mDNS (avahi-daemon)
 
 - **Optional Ports:**  
   - _**4615** – Asymmetrical server (for authentication, if needed)_  

@@ -263,6 +263,10 @@ ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
 
 # Last drop package version
 
+Demo of how to use it: `Demo Monitoring Game`  
+
+**package.json**    
+
 ```
    "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
     "be.elab.pushgenericintegerdate": "https://github.com/EloiStree/OpenUPM_PushGenericIID.git",

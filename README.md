@@ -49,6 +49,20 @@ The project comes pre-configured with the following setup:
   - _**3615** – UDP Trusted relay (for pushing UDP data to the WebSocket server)_  
   - _**7000** – UDP Broadcaster (for sending integers to other applications on the device)_  
 
+ ```
+sudo apt install ufw -y
+sudo ufw allow 22/tcp
+sudo ufw allow 123/udp
+sudo ufw allow 4625/tcp
+sudo ufw allow 4615/tcp
+sudo ufw allow 3615/udp
+sudo ufw allow 7000/udp
+sudo ufw allow 8080/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 5353/udp
+ ```
+
+
 ### **Requirements (Raspberry Pi 4/5)**  
 
 To set up the integer-based multiplayer system, you'll need the following:  

@@ -302,3 +302,10 @@ Demo of how to use it: `Demo Monitoring Game`
     "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
     "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
 ```
+
+
+
+If you did not set the hostname:
+```raspi-config```
+Then `System Options > hostname` then set to `raspberrypi`
+

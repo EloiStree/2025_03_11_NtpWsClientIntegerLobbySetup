@@ -42,6 +42,8 @@ The project comes pre-configured with the following setup:
   - **123** – Network Time Protocol (NTP)  
   - **4625** – Trusted server for lobby management  
   - **8080** – Flask server for debugging and IP discovery
+  - **80* - Setup of your own welcome page website
+    - **433** - in HTTPS version 
   - **5353** - Open to mDNS (avahi-daemon)
 
 - **Optional Ports:**  
@@ -59,6 +61,7 @@ sudo ufw allow 3615/udp
 sudo ufw allow 7000/udp
 sudo ufw allow 8080/tcp
 sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
 sudo ufw allow 5353/udp
  ```
 

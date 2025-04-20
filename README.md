@@ -307,5 +307,6 @@ Demo of how to use it: `Demo Monitoring Game`
 
 If you did not set the hostname:
 ```raspi-config```
-Then `System Options > hostname` then set to `raspberrypi`
+Then `System Options > hostname` then set to `raspberrypi`([Manual](https://www.raspberrypi.com/documentation/computers/configuration.html))
+
 

@@ -41,12 +41,30 @@ The project comes pre-configured with the following setup:
   - **22** – SSH access to your Raspberry Pi  
   - **123** – Network Time Protocol (NTP)  
   - **4625** – Trusted server for lobby management  
-  - **8080** – Flask server for debugging and IP discovery  
+  - **8080** – Flask server for debugging and IP discovery
+  - **80** - Setup of your own welcome page website
+    - **433** - in HTTPS version 
+  - **5353** - Open to mDNS (avahi-daemon)
 
 - **Optional Ports:**  
   - _**4615** – Asymmetrical server (for authentication, if needed)_  
   - _**3615** – UDP Trusted relay (for pushing UDP data to the WebSocket server)_  
   - _**7000** – UDP Broadcaster (for sending integers to other applications on the device)_  
+
+ ```
+sudo apt install ufw -y
+sudo ufw allow 22/tcp
+sudo ufw allow 123/udp
+sudo ufw allow 4625/tcp
+sudo ufw allow 4615/tcp
+sudo ufw allow 3615/udp
+sudo ufw allow 7000/udp
+sudo ufw allow 8080/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 5353/udp
+ ```
+
 
 ### **Requirements (Raspberry Pi 4/5)**  
 
@@ -257,3 +275,41 @@ ssh -i ~/.ssh/eloistree_all_pi root@raspberrypi5dk1.local
 
 
 ----------
+
+
+
+# Last drop package version
+
+Demo of how to use it: `Demo Monitoring Game`  
+
+**package.json**    
+
+```
+    "be.elab.asymsigner": "https://github.com/EloiStree/OpenUPM_AsymmetricalClipboardCoaster.git",
+    "be.elab.basicactioniid": "https://github.com/EloiStree/OpenUPM_BasicActionIID.git",
+    "be.elab.developernote": "https://github.com/EloiStree/2024_08_09_DeveloperNote.git",
+    "be.elab.iid": "https://github.com/EloiStree/OpenUPM_IID.git",
+    "be.elab.intlobby": "https://github.com/EloiStree/2025_03_11_IntegerLobbyFacade.git",
+    "be.elab.intlobbysampleship": "https://github.com/EloiStree/2025_03_18_IntLobbySampleSpaceship.git",
+    "be.elab.intlobbysetup": "https://github.com/EloiStree/2025_03_11_NtpWsClientIntegerLobbySetup.git",
+    "be.elab.intmapping": "https://github.com/EloiStree/2025_03_16_IntegerMapping.git",
+    "be.elab.pbit4096b58pkcs1sha256": "https://github.com/EloiStree/OpenUPM_pBit4096B58Pkcs1SHA256.git",
+    "be.elab.primitiverelay": "https://github.com/EloiStree/2025_04_02_FacadePrimitiveValueRelay.git",
+    "be.elab.pushgenericintegerdate": "https://github.com/EloiStree/OpenUPM_PushGenericIID.git",
+    "be.elab.quickgitutility": "https://github.com/EloiStree/OpenUPM_QuickGitUtility.git",
+    "be.elab.scanpioffline": "https://github.com/EloiStree/2025_03_26_ScanForRaspberryPi.git",
+    "be.elab.tickcollection": "https://github.com/EloiStree/OpenUPM_TickCollection.git",
+    "be.elab.timepercent": "https://github.com/EloiStree/2025_02_17_TimePercentInterface.git",
+    "be.elab.unityfetchoffsetntp": "https://github.com/EloiStree/OpenUPM_UnityFetchOffsetNTP.git",
+    "be.elab.unitypackagefacilitator": "https://github.com/EloiStree/OpenUPM_UnityPackageFacilitator.git",
+    "be.elab.wsasymauth": "https://github.com/EloiStree/OpenUPM_WsAsymAuth.git",
+    "be.elab.wsclientiid": "https://github.com/EloiStree/OpenUPM_NtpWsClientIID.git",
+```
+
+
+
+If you did not set the hostname:
+```raspi-config```
+Then `System Options > hostname` then set to `raspberrypi`([Manual](https://www.raspberrypi.com/documentation/computers/configuration.html))
+
+
